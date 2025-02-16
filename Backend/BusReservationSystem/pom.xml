@@ -9,7 +9,7 @@
 		<version>2.5.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sunbeam</groupId>
+	<groupId>com.acts</groupId>
 	<artifactId>BusReservationSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BusReservationSystem</name>
