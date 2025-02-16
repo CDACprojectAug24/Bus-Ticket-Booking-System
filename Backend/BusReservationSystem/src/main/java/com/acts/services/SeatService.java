@@ -1,5 +1,7 @@
 package com.acts.services;
 
-public interface SeatService {
+import com.acts.entities.Seat;
 
+public interface SeatService {
+	Seat saveSeat(Seat seat);
 }

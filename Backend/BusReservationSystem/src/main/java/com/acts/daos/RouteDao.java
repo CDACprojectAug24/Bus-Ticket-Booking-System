@@ -1,5 +1,9 @@
 package com.acts.daos;
 
-public class RouteDao {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.acts.entities.Route;
+
+public interface RouteDao extends JpaRepository<Route, Integer>{
+	
 }
