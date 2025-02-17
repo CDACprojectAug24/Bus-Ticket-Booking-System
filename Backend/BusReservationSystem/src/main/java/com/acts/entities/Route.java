@@ -24,17 +24,17 @@ public class Route {
 	private String toStation;
 
 	@OneToMany(mappedBy = "route",cascade = CascadeType.MERGE)
-	private List<PickingPoint> pickingPoint;
+	private List<PickUpPoint> pickingPoint;
 
 	@OneToMany(mappedBy = "route",cascade = CascadeType.MERGE)
-	private List<DroppingPoint> droppingPoint;
+	private List<DropingPoint> droppingPoint;
 
 	public Route() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public Route(int routeId, String fromStation, String toStation, List<PickingPoint> pickingPoint,
-			List<DroppingPoint> droppingPoint) {
+			List<DropingPoint> droppingPoint) {
 		this.routeId = routeId;
 		this.fromStation = fromStation;
 		this.toStation = toStation;
@@ -71,19 +71,19 @@ public class Route {
 		this.toStation = toStation;
 	}
 
-	public List<PickingPoint> getPickingPoint() {
+	public List<PickUpPoint> getPickingPoint() {
 		return pickingPoint;
 	}
 
-	public void setPickingPoint(List<PickingPoint> pickingPoint) {
+	public void setPickingPoint(List<PickUpPoint> pickingPoint) {
 		this.pickingPoint = pickingPoint;
 	}
 
-	public List<DroppingPoint> getDroppingPoint() {
+	public List<DropingPoint> getDroppingPoint() {
 		return droppingPoint;
 	}
 
-	public void setDroppingPoint(List<DroppingPoint> droppingPoint) {
+	public void setDroppingPoint(List<DropingPoint> droppingPoint) {
 		this.droppingPoint = droppingPoint;
 	}
 
