@@ -1,9 +1,6 @@
 package com.acts.entities;
 
-public class DropingPoint {
 
-}
-package com.acts.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="droppingPoint")
-public class DroppingPoint {
+public class DropingPoint {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="droppingPointId")
@@ -28,17 +25,17 @@ public class DroppingPoint {
 	@JoinColumn(name="routeId")
 	private Route route;
 	
-	public DroppingPoint() {
+	public DropingPoint() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public DroppingPoint(int droppingPointId, String name, Route route) {
+	public DropingPoint(int droppingPointId, String name, Route route) {
 		this.droppingPointId = droppingPointId;
 		this.name = name;
 		this.route = route;
 	}
 
-	public DroppingPoint(String name) {
+	public DropingPoint(String name) {
 		this.name = name;
 	}
 

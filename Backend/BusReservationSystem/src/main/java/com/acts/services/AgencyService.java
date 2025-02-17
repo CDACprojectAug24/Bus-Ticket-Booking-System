@@ -1,58 +1,20 @@
-package com.acts.models;
+package com.acts.services;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Component;
+import java.util.List;
 
-import com.acts.entities.Route;
+import com.acts.entities.Agency;
+//import com.acts.entities.Trip;
 
-@Component
-public class RouteDTO {
-	private String fromStation;
-	private String toStation;
-	private String date;
-
-	public RouteDTO() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public RouteDTO(String fromStation, String toStation, String date) {
-		this.fromStation = fromStation;
-		this.toStation = toStation;
-		this.date = date;
-	}
-
-	public String getFromStation() {
-		return fromStation;
-	}
-
-	public void setFromStation(String fromStation) {
-		this.fromStation = fromStation;
-	}
-
-	public String getToStation() {
-		return toStation;
-	}
-
-	public void setToStation(String toStation) {
-		this.toStation = toStation;
-	}
-
-	public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	@Override
-	public String toString() {
-		return "RouteDTO [fromStation=" + fromStation + ", toStation=" + toStation + ", date=" + date + "]";
-	}
-	
-	public static RouteDTO fromEntity(Route entity) {
-		RouteDTO dto = new RouteDTO();
-		BeanUtils.copyProperties(entity, dto);
-		return dto;
-	}
+public interface AgencyService {
+	Agency findAgencyByEmail(String email);
+	Agency authenticate(String email, String password);
+	List<Agency> findAgencyAll();
+	Agency saveAgency(Agency agency);
+	boolean deleteById(int id);
+	Agency findAgencyById(int id);
+	//List<Trip> findAllAgencyTrips(int agencyId);
+	Agency findById(int agencyId);
+	Agency save(Agency agency);
+	Agency updatePassword(String email, String password);
+	Agency updateAgency(Agency agency);
 }
